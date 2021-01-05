@@ -1,0 +1,609 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Noto Serif', serif;
+}
+
+p{
+    margin: 0;
+}
+
+section{
+    padding: 60px 0;
+}
+/*header*/
+header{
+    width: 100%;
+    height: 100vh ;
+    background: linear-gradient(rgba(229, 230, 231, 0.95), rgba(0, 0, 0, 0.95)), url(img/herman001.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+header > .container{
+    position: relative;
+    height: 100%;
+    padding: 0;
+}
+
+.navbar-brand{
+    position: absolute;
+    width: 100%;
+    max-width: 100px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 650ms;
+}
+
+.navbar-brand:hover{
+    opacity: .8;
+}
+
+.hamburger-menu{
+    position: fixed;
+    top: 25px;
+    right: 40px;
+    height: 50px;
+    display: flex;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7);
+    width: 50px;
+    border-radius: 2px;
+}
+
+.hamburger-menu i{
+    font-size: 30px;
+    color: rgb(196, 110, 53);
+    margin: auto;
+}
+
+.hamburger-menu .fa-times{
+    display: none;
+}
+
+.hamburger-menu .fa-times.open{
+    display: block;
+    opacity: 1;
+
+}
+
+.hamburger-menu .fa-bars.open{
+    display: none;
+}
+
+.nav-list{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    list-style: none;
+    background-color: #101D2C;
+    display: flex;
+    z-index: 900;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: 650ms;
+}
+
+.nav-list.open{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-text{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+}
+
+.hero-text h1{
+    color: rgb(180, 99, 6);
+    font-family: 'Noto Serif', serif;
+    text-shadow: 1px, 2px, 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn{
+    width: 150px;
+    padding: 5px 0 !important;
+    border: 1px solid rgb(196, 110, 53);
+    position:relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255, .3), transparent);
+    transition: all 650ms;
+}
+
+.btn:hover::before{
+    left: 100%;
+}
+
+
+/*about*/
+
+.section-heading h4{
+    text-transform: uppercase;
+    color: rgb(196, 110, 53);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.section-heading h1{
+    color: rgb(196, 110, 53);
+}
+
+.about .btn{
+    width: 150px;
+    color: rgb(196, 110, 53) !important;
+    transition: background-color 0.3s;
+}
+
+.about .btn:hover{
+    color: white !important;
+    background-color: rgb(196, 110, 53) !important;
+}
+
+
+/*Feature*/
+.feature{
+    background-color: rgba(229, 230, 231, 0.95);
+}
+
+.feature i{
+    color:rgb(196, 110, 53);
+    font-size: 50px;
+}
+
+.feature h1{
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.feature p{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+hr{
+    border-top: 1px solid rgba(0,0,0,0.7);
+}
+
+/*Portfolio*/
+.portfolio{
+    text-align: left;
+}
+.portfolio .btn{
+    width: 150px;
+    color: rgb(196, 110, 53) !important;
+    transition: background-color 0.3s;
+}
+
+.portfolio .btn:hover{
+    color: white !important;
+    background-color: rgb(196, 110, 53) !important;
+}
+
+/*Footer*/
+footer{
+    background-color: rgb(185, 182, 171);
+    padding: 10px;
+}
+
+footer .btn{
+    width: 150px;
+    color: white;
+    transition: background-color 0.3s;
+    background-color: rgb(196, 110, 53);
+}
+
+footer .btn:hover{
+    color: white !important;
+    background-color: rgb(177, 136, 25) !important;
+}
+
+footer .display-4{
+    font-size: 45px !important;
+}
+
+footer i{
+    padding: 10px;
+    color: rgb(175, 42, 42);
+}
+
+footer a{
+    text-decoration: none !important;
+    color: white;
+}
+
+footer h5{
+    font-size: 16px;
+}
+
+footer h4{
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+footer a:hover{
+    text-decoration: none !important;
+    color:rgb(180, 99, 6);
+    transition: 0.3s;
+}
+
+footer .fa-twitter-square{
+    color: rgba(85,172,238,1);
+}
+
+footer .fa-facebook-square{
+    color: rgba(59,89,153,1);
+}
+
+footer .fa-instagram-square{
+    color: rgba(228,64,95,1);
+}
+
+/*offers*/
+#offerd{
+    background-color: rgb(185, 182, 171);
+}
+
+#offerd img{
+    width: 100%;
+    height: 50vh;
+}
+
+.offerd h1{
+    font-size: 100px !important;
+    font-weight: 700;
+}
+
+#offerd .btn{
+    width: 150px;
+    color: white;
+    transition: background-color 0.3s;
+    background-color: rgb(196, 110, 53);
+}
+
+#offerd .btn:hover{
+    color: white !important;
+    background-color: rgb(177, 136, 25) !important;
+}
+
+/*testimoni*/
+#testimoni h1{
+    font-size: 40px;
+}
+
+.testimonial p{
+    font-size: 15px !important;
+}
+
+.testimoni img{
+    width: 100%;
+    height: 200px;
+}
+
+#caption{
+    background: linear-gradient(rgba(0,0,0,0.5), rgb(0,0,0,0.7)), url(img/bcg-1.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+#caption i{
+    text-decoration: none;
+    color: white;
+}
+
+#caption i:hover{
+    text-decoration: none;
+    color: rgb(196, 110, 53);
+    transition: 0.3s;
+}
+
+.caption{
+    margin-top: 20px;
+}
+
+/*article*/
+#article img{
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+#article img:hover{
+    border-radius: 5px;
+    transform: scale(1.03);
+    opacity: 0.7;
+}
+
+#article{
+    position: relative;
+}
+
+#article a{
+    text-decoration: none;
+    color: black;
+}
+
+#article a:hover{
+    text-decoration: none;
+    color: rgb(196, 110, 53);
+    transition: 0.3s;
+}
+
+#article p{
+    font-size: 15px;
+}
+
+/*back to top*/
+#back-to-top-btn{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid rgb(196, 110, 53);
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+    z-index: 1;
+}
+
+#back-to-top-btn:hover, #back-to-top-btn:focus{
+    background-color: black;
+    color: white;
+}
+
+.btnEntrance{
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+
+/*zoom in back to top*/
+@keyframes btnEntrance{
+    from{
+        opacity: 0;
+        transform: scale3d(0.3, 0.3,0.3);
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.btnExit{
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnExit;
+}
+
+/*Zoom out back to top*/
+@keyframes btnExit{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+
+/*subscribe*/
+#explore{
+    background: linear-gradient(rgba(0,0,0,0.5), rgb(0,0,0,0.7)), url(img/herman001.jpg);
+    background-size: cover;
+    height: 450px;
+}
+
+#explore .btn{
+    background-color: rgb(180, 99, 6);
+    height: 45.5%;
+}
+
+#explore .btn i{
+    size: 25px;
+}
+
+/*journal*/
+#journal img{
+    width: 100%;
+}
+
+#journal .col-md-4 img{
+    width: 100%;
+}
+
+#journal a{
+    text-decoration: none;
+    color: black;
+}
+
+#journal a:hover{
+    text-decoration: none;
+    color: rgb(180, 99, 6);
+    transition: all 0.3s;
+}
+
+@media (max-width: 570px){
+    header{
+        width: 100%;
+        height: 50vh;
+    }
+
+    .hero-text .display-4{
+        margin-top: 100px;
+    }
+
+    .hero-text a{
+        margin-top: 20px;
+    }
+
+}
+/*small phone or landscape*/
+@media (min-width: 570px){
+    header{
+        width: 100%;
+        height: 40vh;
+    }
+
+    .navbar-brand{
+        max-width: 90px;
+        margin-top: 10px;
+    }
+
+    .hamburger-menu{
+        top: 35px;
+        right: 25px;
+    }
+
+}
+
+/*tablets or medium*/
+@media (min-width: 768px) {
+    .btn{
+        width: 150px;
+    }
+    
+    .display-4{
+        font-size: 80px !important;
+        font-weight: 700;
+    }
+
+    .offerd{
+        background: linear-gradient(rgba(229, 230, 231, 0.95), rgba(0, 0, 0, 0.95)), url(img/herman001.jpg) center no-repeat;
+        background-size: cover;
+    }
+
+    .offerd h1{
+        font-size: 60px;
+        color: rgb(180, 99, 6);
+        margin-top: 50px;
+    }
+    
+    .offerd .btn{
+        margin-bottom: 50px;
+    }
+
+    footer .display-4{
+        font-size: 50px !important;
+    }
+    
+    .caption{
+        margin-top: 70px;
+    }
+}
+
+/*tablet or small laptop*/
+@media (min-width: 992px){
+/*header*/
+header{
+    width: 100%;
+    height: 100vh ;
+    background: linear-gradient(rgba(229, 230, 231, 0.95), rgba(0, 0, 0, 0.95)), url(img/herman001.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+    
+    header > .container{
+        padding: 0 10px;
+    }
+
+    .hamburger-menu{
+        display: none;
+    }
+
+    .navbar-brand{
+        position: initial;
+        transform: initial;
+    }
+
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: initial;
+        flex-direction: row;
+        opacity: initial;
+        transform: initial;
+        transition: initial;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item{
+        margin: 0 30px;
+    }
+
+    .nav-item:last-child{
+        margin-right: 0;
+    }
+
+    .nav-link{
+        position: relative;
+        padding: 0;
+        color: black!important;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    .nav-link::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: rgb(196, 110, 53);
+        width: 100%;
+        height: 2px;
+        bottom: -3px;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s;
+    }
+
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+    
+    .display-4{
+        font-size: 80px !important;
+        font-weight: 700;
+        text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-text p{
+        font-size: 30px !important;
+        font-weight: 700;
+        text-shadow: 1px 2px 2px #000000;
+    }
+
+    footer .display-4{
+        font-size: 50px !important;
+    }
+    
+    .caption{
+        margin-top: 70px;
+    }
+}
